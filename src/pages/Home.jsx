@@ -22,6 +22,7 @@ function Home() {
         bgImg='model-y.jpg'
       />
       <Section
+        id='model-s'
         title='Model S'
         description='Order Online for'
         descriptionLink='Touchless Delivery'
@@ -29,6 +30,7 @@ function Home() {
         buttonTwo='existing inventory'
         bgImg='model-s.jpg'
       />
+
       <Section
         title='Model X'
         description='Order Online for'

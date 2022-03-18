@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 function Section({
   title,
@@ -10,21 +11,27 @@ function Section({
   showDownArrow,
 }) {
   return (
-    <Wrapper bgImg={bgImg}>
-      <TextContainer>
-        <h1>{title}</h1>
-        <p>
-          {description} <a href='/'>{descriptionLink}</a>
-        </p>
-      </TextContainer>
-      <ButtonContainer>
-        <ButtonGroup>
-          <Button1>{buttonOne}</Button1>
-          {buttonTwo && <Button2>{buttonTwo}</Button2>}
-        </ButtonGroup>
-        {showDownArrow && <DownArrow src='/images/down-arrow.svg'></DownArrow>}
-      </ButtonContainer>
-    </Wrapper>
+    <Fade bottom>
+      <Wrapper bgImg={bgImg}>
+        <Fade bottom>
+          <TextContainer>
+            <h1>{title}</h1>
+            <p>
+              {description} <a href='/'>{descriptionLink}</a>
+            </p>
+          </TextContainer>
+          <ButtonContainer>
+            <ButtonGroup>
+              <Button1>{buttonOne}</Button1>
+              {buttonTwo && <Button2>{buttonTwo}</Button2>}
+            </ButtonGroup>
+            {showDownArrow && (
+              <DownArrow src='/images/down-arrow.svg'></DownArrow>
+            )}
+          </ButtonContainer>
+        </Fade>
+      </Wrapper>
+    </Fade>
   )
 }
 export default Section
