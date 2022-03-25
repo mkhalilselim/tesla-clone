@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import Section from '../components/Section'
+import Header from '../components/HomeHeader'
+import HomeFooter from '../components/HomeFooter'
 
 function Home() {
   return (
+    <>
+    <Header />
     <Container>
       <Section
         title='Model 3'
@@ -59,6 +63,8 @@ function Home() {
         bgImg='accessories.jpg'
       />
     </Container>
+    <HomeFooter />
+    </>
   )
 }
 export default Home

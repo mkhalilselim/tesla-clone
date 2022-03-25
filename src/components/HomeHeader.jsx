@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-function Header() {
+function HomeHeader() {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
@@ -25,14 +25,14 @@ function Header() {
           <Link to="/">Shop</Link>
         </li>
         <li>
-          <Link to="/">Account</Link>
+          <Link to="/login">Account</Link>
         </li>
         <li onClick={() => setBurgerStatus(true)}>Menu</li>
       </RightMenu>
 
       <BurgerMenu show={burgerStatus}>
         <CloseIcon onClick={() => setBurgerStatus(false)}>
-          <img src="/images/close.svg" />
+          <img src="/images/close.svg" alt='close icon' />
         </CloseIcon>
         <li>
           <Link to="/">Existing Inventory</Link>
@@ -79,12 +79,12 @@ function Header() {
         <li>
           <Link to="/">
             <Lang>
-              <img src="/images/lang.svg" />
+              <img src="/images/lang.svg" alt='language icon'/>
               <div>
                 <p>
                   <strong>United States</strong>
                 </p>
-                <a to="/">English</a>
+                <a href="/">English</a>
               </div>
             </Lang>
           </Link>
@@ -93,7 +93,7 @@ function Header() {
     </Container>
   );
 }
-export default Header;
+export default HomeHeader;
 
 const Container = styled.div`
   position: fixed;
